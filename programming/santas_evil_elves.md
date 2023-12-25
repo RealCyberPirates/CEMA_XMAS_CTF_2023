@@ -25,6 +25,51 @@ The challenge involves calculating the correct projectile speed to hit elves at 
 5. Iterative Process:
     - Repeat the process for each level of the challenge.
 
+```python
+import socket
+import re
+import math
+
+def calculate_muzzle_velocity(elevation, distance):
+    print(f"elevation: {elevation} distance: {distance}")
+    earth_g = 9.81  # Acceleration due to gravity
+    fall_time = math.sqrt(2 * elevation / earth_g)
+    return distance / fall_time
+
+def main():
+    calculate_muzzle_velocity(56, 1024)
+    print("Let's shoot some elves shall we?")
+
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect(("167.172.109.120", 3333))
+        while True:
+            buf = s.recv(2048).decode()
+            if not buf:
+                break
+            print(f"Buf: {buf}")
+
+            if "Press enter to start..." in buf:
+                s.send(b"\n")
+
+            if "(in m/s)" in buf:
+                re_height_distance = re.compile(r"([0-9]+)m")
+                results = re_height_distance.findall(buf)
+
+                if len(results) >= 2:
+                    height, distance = map(float, results[:2])
+                    print(f"Height: {height} Distance: {distance}")
+                    muzzle_speed = calculate_muzzle_velocity(height, distance)
+                    print(f"Required speed: {muzzle_speed:.2f}")
+                    s.sendall(f"{muzzle_speed:.2f}\n".encode())
+                else:
+                    print("Failed to parse height and distance")
+
+if __name__ == "__main__":
+    main()
+```
+
+The script needed to be executed a few time due to strange rounding quirks.
+
 ```sh
 How fast should he shoot his cannon? (in m/s)
 
