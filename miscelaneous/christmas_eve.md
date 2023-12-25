@@ -77,4 +77,4 @@ CEMA{Wh1t3Sp@c3s_@r3_N@sty!}
 
 ## Conclusion
 
-The challenge presented by `Christmas.exe` was a fascinating exercise in binary encoding and decoding. The process of analyzing the output, formulating a decoding strategy, and implementing it through a Python script underscored the importance of critical thinking and problem-solving skills in CTF challenges
+The challenge presented by `Christmas.exe` was a fascinating exercise in binary encoding and decoding. The process of analyzing the output, formulating a decoding strategy, and implementing it through a Python script underscored the importance of critical thinking and problem-solving skills in CTF challenges.
