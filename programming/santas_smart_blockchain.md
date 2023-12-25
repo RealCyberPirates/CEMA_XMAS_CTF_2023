@@ -132,6 +132,8 @@ sorted_blockchain = sort_blockchain(blockchain_data)
 reconstruct_file(sorted_blockchain, 'reconstructed_image.jpeg')
 ```
 
+![reconstructed_image](../images/reconstructed_image.jpeg)
+
 ### Final Flag
 
 `FLAG{N0t_S0_Sm4rt_Ch41n?}`
