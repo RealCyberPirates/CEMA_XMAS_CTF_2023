@@ -13,7 +13,8 @@ Discovering the QR Codes
 
 ### Downloading and Decoding the QR Codes
 
-Scripting the Download:
+Scripting the Download
+
 - A Python script was written to automate the downloading of each QR code image from the server.
 - This script used the requests library to fetch the images and stored them locally for decoding.
 
@@ -24,7 +25,8 @@ Scripting the Download:
 
 ### Identifying the Flag
 
-Flag Extraction:
+Flag Extraction
+
 - The script was designed to search for a specific pattern in the decoded text, matching the format `CEMA{...}`.
 - Upon finding a QR code with the matching pattern, the script successfully identified the flag: `CEMA{SAME_SAME_BUT_DIFFERENT}`.
 
