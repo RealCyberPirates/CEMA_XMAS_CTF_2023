@@ -6,18 +6,18 @@
 
 During a Christmas-themed Capture The Flag (CTF) challenge, I encountered a binary named `Christmas.exe`. This binary, when executed, produced an output that I redirected to a file named `xmas_output.txt` using the command `Christmas.exe > xmas_output.txt`. Upon analyzing this output, I noticed an intriguing pattern of spaces and tabs, which hinted at the possibility of them representing binary code.
 
-![xmas_output](christmas_exe.png)
+![xmas_output](../images/christmas_exe.png)
 
-![xmas_output](./xmas_output.png)
+![xmas_output](../images/xmas_output.png)
 
-![xmas_output_decode_from_b64](./xmas_output_decode_from_b64.png)
+![xmas_output_decode_from_b64](../images/xmas_output_decode_from_b64.png)
 
 ## Analysis of the Output
 
 The output file `xmas_output.txt` contained a sequence of spaces and tabs. The distinct pattern in this sequence suggested a binary encoding, where spaces could represent binary 0s and tabs could represent binary 1s. This observation was crucial in formulating a strategy to decode the message.
 
-![xmas_output_decode_from_b64_to_binary.png](./xmas_output_decode_from_b64_to_binary.png)
-![xmas_output_decode_from_b64_to_binary2.png](./xmas_output_decode_from_b64_to_binary2.png)
+![xmas_output_decode_from_b64_to_binary.png](../images/xmas_output_decode_from_b64_to_binary.png)
+![xmas_output_decode_from_b64_to_binary2.png](../images/xmas_output_decode_from_b64_to_binary2.png)
 
 ## Decoding Strategy
 

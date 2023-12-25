@@ -11,9 +11,9 @@ Steps Taken
 
 3. Password Discovery: The password for `OpenPuff` was determined to be `03087-08351-27H`. This was identified as the unnamed account in the Bahamas from the 1995 movie "Hackers."
 
-    ![unnamed_account](unnamed_account.png)
+    ![unnamed_account](../images/unnamed_account.png)
 
-    ![openpuff](./openpuff.png)
+    ![openpuff](../images/openpuff.png)
 
 4. Revealing the Hidden File: The extracted data revealed a file named `itsaprivilegenotaright`.
 
@@ -21,7 +21,7 @@ Steps Taken
 
 6. OSINT via Google Maps: Visiting the specified location on Google Maps and examining uploaded images revealed an image containing the flag.
 
-![flag](./flag.png)
+![flag](../images/flag.png)
 
 ## Conclusion
 

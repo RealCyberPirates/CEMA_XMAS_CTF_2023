@@ -9,28 +9,29 @@ The challenge required analyzing a software-defined radio (SDR) recording and mo
 
 Discovering the Secret Channel
 
-### Running the Python Script:
+### Running the Python Script
 
 - Initially, we ran the provided Python script which connected to an MQTT broker.
 - The script revealed the existence of a secret communication channel named `ham`.
 
-![secret_channel](./secret_channel.png)
+![secret_channel](../images/secret_channel.png)
 
 Decoding the SDR Recording
 
-### Analyzing the `gqrx.raw` File:
+### Analyzing the `gqrx.raw` File
 
 - The `gqrx.raw` file, an SDR recording, was key to finding the password.
 - Using the program `gqrx` with the correct settings, we discovered words hidden - steganography in the waterfall display.
 - The password broadcast began around 16 minutes into the recording.
 
-![gqrx](./gqrx.png)
+![gqrx](../images/gqrx.png)
 
-![password](./password.png)
+![password](../images/password.png)
 
 Accessing the Secret Channel
 
-### Modifying the Python Script:
+### Modifying the Python Script
+
 - With the password obtained, we modified the script to connect to the "ham" channel on a different port.
 - The password `merrychristmasyoufilthyanimal` was used for authentication.
 
@@ -49,7 +50,7 @@ and uncomment the following line in `def connect():`
 
 Retrieving the Flag
 
-### Running the Modified Script:
+### Running the Modified Script
 
 - Upon executing the modified script, we successfully connected to the secret channel and received the flag.
 
@@ -57,6 +58,7 @@ Retrieving the Flag
 Xmas codeword:
 CEMA{S4nt4_Th3_Sp3ctrum_P41nt3r}
 ```
+
 ## Conclusion
 
 This challenge demonstrated the use of SDR for capturing and analyzing radio transmissions, the use of steganography in radio signals, and the practical application of MQTT in a CTF context. By carefully analyzing the SDR recording and appropriately modifying the Python script, we were able to access the secret channel and capture the flag: `CEMA{S4nt4_Th3_Sp3ctrum_P41nt3r}`.
