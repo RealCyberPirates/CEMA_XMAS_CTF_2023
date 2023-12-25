@@ -13,9 +13,6 @@ Upon downloading and opening the "CEMA_SECRET_DOCUMENT.docx", the document appea
 Steps to Uncover the Flag:
 
 - Inspecting the Document: Initially, the document appeared to be a typical Word file with text and CEMA logos in the header and footer.
-
 - Exploring Embedded Objects: The CEMA logos were not mere images; they were embedded documents.
-
 - Accessing the Embedded Documents: Double-clicking on the right image in the footer of the document opened another document.
-
 - Revealing the Flag: This action revealed the hidden flag: `CEMA{!!!_SUPER_SECRET_FLAG_HERE_!!!}`.
